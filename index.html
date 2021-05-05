@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web-calculator</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="calculator" class="container">
+    <header id="showInput">0</header>
+    <div class="result" id="showResult"></div>
+    <div class="tools">
+      <span class="history">history</span>
+      <span class="goback" onclick="backspace()">back</span>
+    </div>
+    <div class="btns-body">
+      <div class="row">
+        <span class="btn clear" onclick="clearAll()">C</span>
+        <span class="btn theme-green">( )</span>
+        <span class="btn theme-green">%</span>
+        <span class="btn theme-green" onclick="inputOperator('/')">÷</span>
+      </div>
+      <div class="row">
+        <span class="btn nums" onclick="inputNums(7)">7</span>
+        <span class="btn nums" onclick="inputNums(8)">8</span>
+        <span class="btn nums" onclick="inputNums(9)">9</span>
+        <span class="btn theme-green" onclick="inputOperator('*')">x</span>
+      </div>
+      <div class="row">
+        <span class="btn nums" onclick="inputNums(4)">4</span>
+        <span class="btn nums" onclick="inputNums(5)">5</span>
+        <span class="btn nums" onclick="inputNums(6)">6</span>
+        <span class="btn theme-green" onclick="inputOperator('-')">-</span>
+      </div>
+      <div class="row">
+        <span class="btn nums" onclick="inputNums(1)">1</span>
+        <span class="btn nums" onclick="inputNums(2)">2</span>
+        <span class="btn nums" onclick="inputNums(3)">3</span>
+        <span class="btn theme-green" onclick="inputOperator('+')">+</span>
+      </div>
+      <div class="row">
+        <span class="btn ">+/-</span>
+        <span class="btn nums" onclick="inputNums(0)">0</span>
+        <span class="btn " onclick="inputPoint()">.</span>
+        <span class="btn equal" onclick="inputEnter()">=</span>
+      </div>
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
